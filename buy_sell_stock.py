@@ -20,7 +20,13 @@ class BuySellStock:
         return max_profit
 
     def sol2(self,prices: list[int]):
-        pass
+        profit = 0
+        for i in range(len(prices)):
+            for j in range(i+1,len(prices)):
+                new_profit = prices[j]-prices[i]
+                if new_profit > profit:
+                    profit = new_profit
+        return profit
 
 
 if __name__=='__main__':
@@ -28,4 +34,5 @@ if __name__=='__main__':
     solution = BuySellStock()
     max_profit = solution.sol1(prices)
     print(max_profit)
-    # solution.sol2(prices)
+    max_profit = solution.sol2(prices)
+    print(max_profit)
