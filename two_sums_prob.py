@@ -16,11 +16,19 @@ class Two_Sums:
 
 
     def sol2(self, arr: list[int], target: int):
-        pass
+        hashMap = {}
+        for i, val in enumerate(arr):
+            dif = target - val 
+            if dif in hashMap:
+                print([hashMap[dif],i])
+                
+            hashMap[val]= i
+
 
 
 if __name__=='__main__':
     inp = [2,7,11,15]
-    target = 1
+    target = 22
     problems = Two_Sums()
+    problems.sol2(inp,target)
     problems.sol1(inp,target)
