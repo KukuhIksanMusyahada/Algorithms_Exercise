@@ -5,3 +5,4 @@ List of Interview Algorithm Problems
 2. Buy and Sell Stock Problems
 3. Duplicate Problems
 4. Product of array problems
+5. Max Sub Array Problems
